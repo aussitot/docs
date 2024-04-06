@@ -42,15 +42,13 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
     {
       "group": "English",
       "pages": [
-        "essentials/markdown",
+        "lg-english/quickstart",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
@@ -61,7 +59,7 @@
     {
       "group": "Français",
       "pages": [
-        "essentials/markdown",
+        "lg-french/quickstart",
         "essentials/code",
         "essentials/images",
         "essentials/settings",
