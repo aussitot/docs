@@ -27,13 +27,17 @@
   },
   "tabs": [
     {
+      "name": "English",
+      "url": "lg-english"
+    },
+    {
+      "name": "Français",
+      "url": "lg-french"
+    },
+    {
       "name": "API Reference",
       "url": "api-reference"
     },
-    {
-      "name": "English",
-      "url": "lg-english"
-    }  
   ],
   "anchors": [
     {
