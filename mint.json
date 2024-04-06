@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "https://https://discord.gg/fBjvmG5uX4"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://www.legaussitot.com/admin.php"
   },
   "tabs": [
     {
@@ -48,7 +48,18 @@
       ]
     },
     {
-      "group": "Essentials",
+      "group": "English",
+      "pages": [
+        "essentials/markdown",
+        "essentials/code",
+        "essentials/images",
+        "essentials/settings",
+        "essentials/navigation",
+        "essentials/reusable-snippets"
+      ]
+    },
+    {
+      "group": "Français",
       "pages": [
         "essentials/markdown",
         "essentials/code",
