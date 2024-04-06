@@ -29,7 +29,11 @@
     {
       "name": "API Reference",
       "url": "api-reference"
-    }
+    },
+    {
+      "name": "English",
+      "url": "lg-english"
+    }  
   ],
   "anchors": [
     {
