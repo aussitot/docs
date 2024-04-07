@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Community",
-      "url": "discord.gg/fBjvmG5uX4"
+      "url": "https://discord.gg/fBjvmG5uX4"
     }
   ],
   "topbarCtaButton": {
@@ -39,11 +39,14 @@
       "url": "api-reference"
     }
   ],
+  "primaryTab": {
+    "name": "Home"
+  },
   "anchors": [
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://https://discord.gg/fBjvmG5uX4"
+      "url": "https://discord.gg/fBjvmG5uX4"
     }
   ],
   "topAnchor": 
