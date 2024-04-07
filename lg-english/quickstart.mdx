@@ -69,18 +69,18 @@ Let's learn how.
       </Expandable>
     </ResponseField>
 
-    Depending on the type of `transaction`, the price fields must also be filled in.
+    Depending on the type of `transaction`, you will also need to fill in the price fields.
     <Tip>Don't remember a price? Enter `0.00`, you can change it later.</Tip>
     <ResponseField name="purchase price" type="decimal" required>
-      Price at which the item is offered for sale. Required for `for sale`, `sold` transactions.
+      Item purchase price. Required for `owned`, `for sale`, `sold`, `to restore` transactions.
     </ResponseField>
     <ResponseField name="for sale price" type="decimal" required>
-      Item sale price. Required for `sold` transactions.
+      Item sale price. Required for `for sale`, `sold` transactions.
     </ResponseField>
     <ResponseField name="sold price" type="decimal" required>
       Item selling price. Required for `sold` transactions.
     </ResponseField>
-    
+
     For `sold` items, you can optionally indicate on which store the item was sold.
     <ResponseField name="sold on" type="list">
       Store where the item was sold.
