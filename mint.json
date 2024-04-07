@@ -70,6 +70,12 @@
       "pages": [
         "lg-french/quickstart"
       ]
+    },
+    {
+      "group": "Data References",
+      "pages": [
+        "lg-french/dashboard"
+      ]
     }
   ],
   "footerSocials": {
