@@ -68,7 +68,13 @@
     {
       "group": "Pour Commencer",
       "pages": [
-        "lg-french/quickstart"
+        "lg-french/quickstart",
+        "lg-french/set",
+        "lg-french/collections",
+        "lg-french/transactions",
+        "lg-french/bulk",
+        "lg-french/fees",
+        "lg-french/faq"
       ]
     },
     {
