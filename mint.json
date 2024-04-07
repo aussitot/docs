@@ -17,8 +17,8 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "https://https://discord.gg/fBjvmG5uX4"
+      "name": "Community",
+      "url": "https://discord.gg/fBjvmG5uX4"
     }
   ],
   "topbarCtaButton": {
@@ -27,8 +27,7 @@
   },
   "tabs": [
     {
-      "name": "Welcome",
-      "url": "/"
+      "name": "Welcome"
     },
     {
       "name": "English",
