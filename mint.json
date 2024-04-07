@@ -33,6 +33,10 @@
     {
       "name": "Français",
       "url": "lg-french"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
     }
   ],
   "primaryTab": {
@@ -68,19 +72,21 @@
     {
       "group": "Pour Commencer",
       "pages": [
-        "lg-french/quickstart",
-        "lg-french/set",
-        "lg-french/collections",
-        "lg-french/transactions",
-        "lg-french/bulk",
-        "lg-french/fees",
-        "lg-french/faq"
+        "lg-french/quickstart"
       ]
     },
     {
-      "group": "Data References",
+      "group": "API Documentation",
       "pages": [
-        "lg-french/dashboard"
+        "api-reference/introduction"
+      ]
+    },
+    {
+      "group": "Endpoint Examples",
+      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
+        "api-reference/endpoint/delete"
       ]
     }
   ],
