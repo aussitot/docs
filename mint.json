@@ -40,7 +40,7 @@
     }
   ],
   "primaryTab": {
-    "name": "Home"
+    "name": "Welcome"
   },
   "anchors": [
     {
@@ -49,11 +49,6 @@
       "url": "https://discord.gg/fBjvmG5uX4"
     }
   ],
-  "topAnchor": 
-    {
-      "name": "Welcome",
-      "icon": "house"
-    },
   "navigation": [
     {
       "group": "Get Started",
