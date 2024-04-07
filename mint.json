@@ -27,9 +27,6 @@
   },
   "tabs": [
     {
-      "name": "Welcome"
-    },
-    {
       "name": "English",
       "url": "lg-english"
     },
