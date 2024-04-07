@@ -41,7 +41,7 @@ Apprenons comment faire.
       Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires).
     </ResponseField>
     <ResponseField name="status" type="list" required>
-      Neuf ou d’occasion ? Non requis pour un ajout dans la collection `wanted`
+      Neuf ou d’occasion ? Non requis pour les transactions de type : `wanted`
       <Expandable title="properties">
         <ResponseField name="new" type="string">
           Article Neuf
@@ -68,10 +68,23 @@ Apprenons comment faire.
         </ResponseField>
         <ResponseField name="to restore" type="string">
           Article incomplet qui nécessite d'être restauré.
-          <Tip>Tant que les articles sont dans l'état `To Restore` ils ne sont pas pris en compte dans le tableau de bord.</Tip>
+          <Tip>Tant que les articles sont dans l'état `to restore` ils ne sont pas pris en compte dans le tableau de bord.</Tip>
         </ResponseField>
       </Expandable>
     </ResponseField>
+
+    En fonction du type de `transaction` il faut également remplir les champs concernant les prix :
+    <Tip>Vous ne vous rappelez plus d'un prix ? Entrez `0.00`, vous pourrez modifier plus tard.</Tip>
+    <ResponseField name="purchase price" type="decimal" required>
+      Prix d'achat de l'article. Obligatoire pour les transactions `owned`, `for sale`, `sold`, `to restore`.
+    </ResponseField>
+    <ResponseField name="for sale price" type="decimal" required>
+      Prix de mise en vente de l'article. Obligatoire pour les transactions `for sale`, `sold`.
+    </ResponseField>
+    <ResponseField name="for sale price" type="decimal" required>
+      Prix de vente de l'article.Obligatoire pour les transactions `sold`.
+    </ResponseField>
+
   </Step>
 </Steps>
 
