@@ -64,6 +64,12 @@
       ]
     },
     {
+      "group": "Data References",
+      "pages": [
+        "lg-english/dashboard"
+      ]
+    },
+    {
       "group": "Français",
       "pages": [
         "lg-french/quickstart",
