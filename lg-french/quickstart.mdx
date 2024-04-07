@@ -51,6 +51,27 @@ Apprenons comment faire.
         </ResponseField>
       </Expandable>
     </ResponseField>
+    <ResponseField name="transaction" type="list" required>
+      Choisissez de quel type de transaction il s'agit.
+      <Expandable title="properties">
+        <ResponseField name="wanted" type="string">
+          Article que vous ne possédez pas mais dont vous avez envie.
+        </ResponseField>
+        <ResponseField name="owned" type="string">
+          Article que vous venez d'acheter ou de vous procurer.
+        </ResponseField>
+        <ResponseField name="for sale" type="string">
+          Article que vous mettez en vente.
+        </ResponseField>
+        <ResponseField name="sold" type="string">
+          Article que vous venez de vendre.
+        </ResponseField>
+        <ResponseField name="to restore" type="string">
+          Article incomplet qui nécessite d'être restauré.
+          <Tip>Tant que les articles sont dans l'état `To Restore` ils ne sont pas pris en compte dans le tableau de bord.</Tip>
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
   </Step>
 </Steps>
 
