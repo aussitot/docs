@@ -51,7 +51,7 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Welcome",
       "pages": [
         "introduction"
       ]
@@ -59,6 +59,13 @@
     {
       "group": "English",
       "pages": [
+        {
+          "group": "Getting Started",
+          "pages": [
+            "lg-english/quickstart",
+            "lg-english/bulk"
+          ]
+        },
         "lg-english/quickstart",
         "lg-english/bulk",
         "essentials/images",
