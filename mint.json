@@ -57,21 +57,10 @@
       ]
     },
     {
-      "group": "English",
+      "group": "Getting Started",
       "pages": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "lg-english/quickstart",
-            "lg-english/bulk"
-          ]
-        },
         "lg-english/quickstart",
-        "lg-english/bulk",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "lg-english/bulk"
       ]
     },
     {
