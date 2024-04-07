@@ -25,6 +25,24 @@
     "name": "Dashboard",
     "url": "https://www.legaussitot.com/admin.php"
   },
+  "tabs": [
+    {
+      "name": "Welcome",
+      "url": "/"
+    },
+    {
+      "name": "English",
+      "url": "lg-english"
+    },
+    {
+      "name": "Français",
+      "url": "lg-french"
+    },
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
   "anchors": [
     {
       "name": "Community",
