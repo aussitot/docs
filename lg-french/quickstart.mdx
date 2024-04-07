@@ -17,7 +17,7 @@ Apprenons comment faire.
 
 <Steps>
   <Step title="Recherchez le set">
-    Pour ajouter un item dans votre collection (en stock, à vendre, vendu, à restaurer ou souhaité) commencez par afficher la fiche du set en entrant son numéro dans la zone de recherche.
+    Pour ajouter un item dans votre collection (en stock, à vendre, vendu, à restaurer ou souhaité) commencez par afficher la fiche du set en entrant son numéro dans la `zone de recherche`.
     
     <Frame caption="Zone de recherche">
       <img src="/images/search.png" />
@@ -33,24 +33,32 @@ Apprenons comment faire.
   <Step title="Saisissez les informations">
     Remplissez les champs.
 
+<AccordionGroup>
+  <Accordion icon="github" title="Date">
     <ResponseField name="date" type="date" required>
       Date de la transaction.
-      <Tip>Vous ne vous rappelez plus de la date ? Choisissez la date du jour, vous pourrez modifier plus tard.</Tip>
+     <Tip>Vous ne vous rappelez plus de la date ? Choisissez la date du jour, vous pourrez modifier plus tard.</Tip>
     </ResponseField>
+  </Accordion>
+  <Accordion icon="rectangle-terminal" title="Numéro d'Item">
     <ResponseField name="item" type="integer" required>
       Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires).
     </ResponseField>
-    <ResponseField name="status" type="list" required>
-      Neuf ou d’occasion ? Non requis pour les transactions de type : `wanted`
-      <Expandable title="properties">
-        <ResponseField name="new" type="string">
-          Article Neuf
-        </ResponseField>
-        <ResponseField name="used" type="string">
-          Article d'occasion
-        </ResponseField>
-      </Expandable>
-    </ResponseField>
+  </Accordion>
+    <Accordion icon="rectangle-terminal" title="Status">
+      <ResponseField name="status" type="list" required>
+        Neuf ou d’occasion ? Non requis pour les transactions de type : `wanted`
+        <Expandable title="properties">
+          <ResponseField name="new" type="string">
+            Article Neuf
+          </ResponseField>
+          <ResponseField name="used" type="string">
+            Article d'occasion
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Accordion>
+    <Accordion icon="rectangle-terminal" title="Transaction">
     <ResponseField name="transaction" type="list" required>
       Choisissez de quel type de transaction il s'agit.
       <Expandable title="properties">
@@ -72,7 +80,8 @@ Apprenons comment faire.
         </ResponseField>
       </Expandable>
     </ResponseField>
-
+    </Accordion>
+    <Accordion icon="rectangle-terminal" title="Prix">
     En fonction du type de `transaction` il faut également remplir les champs concernant les prix.
     <Tip>Vous ne vous rappelez plus d'un prix ? Entrez `0.00`, vous pourrez modifier plus tard.</Tip>
     <ResponseField name="purchase price" type="decimal" required>
@@ -89,6 +98,8 @@ Apprenons comment faire.
     <ResponseField name="sold on" type="list">
       Magasin dans lequel a été vendu l'article.
     </ResponseField>
+    </Accordion>  
+  </AccordionGroup>
   </Step>
   <Step title="Sauvegardez">
     Cliquez sur `Save` pour enregistrer votre saisie.
