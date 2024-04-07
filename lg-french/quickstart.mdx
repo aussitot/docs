@@ -30,13 +30,17 @@ Apprenons comment faire.
     </Frame>
   </Step>
   <Step title="Saisissez les informations">
-    These are instructions or content that only pertain to the third step.
-<ResponseField name="name" type="string" required>
-Name of your project. Used for the global title.
+    Remplissez les champs puis cliquez sur `Save`.
 
-Example: `mintlify`
-
-</ResponseField>
+    <ResponseField name="date" type="date" required>
+      Date de la transaction.
+    </ResponseField>
+    <ResponseField name="item" type="integer" required>
+      Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires).
+    </ResponseField>
+    <ResponseField name="status" type="list" required>
+      Neuf ou d’occasion ?
+    </ResponseField>
   </Step>
 </Steps>
 
