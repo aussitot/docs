@@ -34,18 +34,18 @@ Apprenons comment faire.
     Remplissez les champs.
 
 <AccordionGroup>
-  <Accordion icon="github" title="Date">
+  <Accordion icon="calendar-days" title="Date">
     <ResponseField name="date" type="date" required>
       Date de la transaction.
      <Tip>Vous ne vous rappelez plus de la date ? Choisissez la date du jour, vous pourrez modifier plus tard.</Tip>
     </ResponseField>
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Numéro d'Item">
+  <Accordion icon="input-numeric" title="Numéro d'Item">
     <ResponseField name="item" type="integer" required>
       Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires).
     </ResponseField>
   </Accordion>
-    <Accordion icon="rectangle-terminal" title="Status">
+    <Accordion icon="list-dropdown" title="Status">
       <ResponseField name="status" type="list" required>
         Neuf ou d’occasion ? Non requis pour les transactions de type : `wanted`
         <Expandable title="properties">
@@ -58,7 +58,7 @@ Apprenons comment faire.
         </Expandable>
       </ResponseField>
     </Accordion>
-    <Accordion icon="rectangle-terminal" title="Transaction">
+    <Accordion icon="list-dropdown" title="Transaction">
     <ResponseField name="transaction" type="list" required>
       Choisissez de quel type de transaction il s'agit.
       <Expandable title="properties">
@@ -81,7 +81,7 @@ Apprenons comment faire.
       </Expandable>
     </ResponseField>
     </Accordion>
-    <Accordion icon="rectangle-terminal" title="Prix">
+    <Accordion icon="input-numeric" title="Prix">
     En fonction du type de `transaction` il faut également remplir les champs concernant les prix.
     <Tip>Vous ne vous rappelez plus d'un prix ? Entrez `0.00`, vous pourrez modifier plus tard.</Tip>
     <ResponseField name="purchase price" type="decimal" required>
