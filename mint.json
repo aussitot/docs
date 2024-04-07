@@ -33,10 +33,6 @@
     {
       "name": "Français",
       "url": "lg-french"
-    },
-    {
-      "name": "API Reference",
-      "url": "api-reference"
     }
   ],
   "primaryTab": {
@@ -73,20 +69,6 @@
       "group": "Pour Commencer",
       "pages": [
         "lg-french/quickstart"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
       ]
     }
   ],
