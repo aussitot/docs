@@ -72,12 +72,7 @@
     {
       "group": "Français",
       "pages": [
-        "lg-french/quickstart",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "lg-french/quickstart"
       ]
     },
     {
