@@ -1,0 +1,67 @@
+<AccordionGroup>
+  <Accordion icon="calendar-days" title="Date">
+    <ResponseField name="date" type="date" required>
+      Date de la transaction.
+     <Tip>Vous ne vous rappelez plus de la date ? Choisissez la date du jour, vous pourrez modifier plus tard.</Tip>
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="input-numeric" title="Numéro d'Item">
+    <ResponseField name="item" type="integer" required>
+      Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires).
+    </ResponseField>
+  </Accordion>
+    <Accordion icon="list-dropdown" title="Status">
+      <ResponseField name="status" type="list" required>
+        Neuf ou d’occasion ? Non requis pour les transactions de type : `wanted`
+        <Expandable title="properties">
+          <ResponseField name="new" type="string">
+            Article Neuf
+          </ResponseField>
+          <ResponseField name="used" type="string">
+            Article d'occasion
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Accordion>
+    <Accordion icon="list-dropdown" title="Transaction">
+    <ResponseField name="transaction" type="list" required>
+      Choisissez de quel type de transaction il s'agit.
+      <Expandable title="properties">
+        <ResponseField name="wanted" type="string">
+          Article que vous ne possédez pas mais dont vous avez envie.
+        </ResponseField>
+        <ResponseField name="owned" type="string">
+          Article que vous venez d'acheter ou de vous procurer.
+        </ResponseField>
+        <ResponseField name="for sale" type="string">
+          Article que vous mettez en vente.
+        </ResponseField>
+        <ResponseField name="sold" type="string">
+          Article que vous venez de vendre.
+        </ResponseField>
+        <ResponseField name="to restore" type="string">
+          Article incomplet qui nécessite d'être restauré.
+          <Tip>Tant que les articles sont dans l'état `to restore` ils ne sont pas pris en compte dans le tableau de bord.</Tip>
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+    </Accordion>
+    <Accordion icon="input-numeric" title="Prix">
+    En fonction du type de `transaction` il faut également remplir les champs concernant les prix.
+    <Tip>Vous ne vous rappelez plus d'un prix ? Entrez `0.00`, vous pourrez modifier plus tard.</Tip>
+    <ResponseField name="purchase price" type="decimal" required>
+      Prix d'achat de l'article. Obligatoire pour les transactions `owned`, `for sale`, `sold`, `to restore`.
+    </ResponseField>
+    <ResponseField name="for sale price" type="decimal" required>
+      Prix de mise en vente de l'article. Obligatoire pour les transactions `for sale`, `sold`.
+    </ResponseField>
+    <ResponseField name="sold price" type="decimal" required>
+      Prix de vente de l'article. Obligatoire pour les transactions `sold`.
+    </ResponseField>
+
+    Pour les articles `sold` vous pouvez éventuellement indiquer sur quel magasin a été vendu l'article.
+    <ResponseField name="sold on" type="list">
+      Magasin dans lequel a été vendu l'article.
+    </ResponseField>
+    </Accordion>  
+  </AccordionGroup>
