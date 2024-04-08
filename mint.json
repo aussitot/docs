@@ -80,7 +80,8 @@
     {
       "group": "Data References",
       "pages": [
-        "lg-french/dashboard"
+        "lg-french/dashboard",
+        "lg-french/forms"
       ]
     }
   ],
