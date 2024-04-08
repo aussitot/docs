@@ -1,0 +1,66 @@
+<AccordionGroup>
+  <Accordion icon="calendar-days" title="Date">
+    <ResponseField name="date" type="date" required>
+      Transaction date.
+     <Tip>Don't remember the date? Choose today's date, you can change it later.</Tip>
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="input-numeric" title="Item number">
+    <ResponseField name="item" type="integer" required>
+      Item number (if you have several copies).
+    </ResponseField>
+  </Accordion>
+    <Accordion icon="list-dropdown" title="Status">
+      <ResponseField name="status" type="list" required>
+        New or used? Not required for: `wanted` transactions
+        <Expandable title="properties">
+          <ResponseField name="new" type="string">
+            New item
+          </ResponseField>
+          <ResponseField name="used" type="string">
+            Used item
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Accordion>
+    <Accordion icon="list-dropdown" title="Transaction">
+    <ResponseField name="transaction" type="list" required>
+      Choose the type of transaction.
+      <Expandable title="properties">
+        <ResponseField name="wanted" type="string">
+          Item you don't own but want to buy.
+        </ResponseField>
+        <ResponseField name="owned" type="string">
+          Item you have just bought or purchased.
+        </ResponseField>
+        <ResponseField name="for sale" type="string">
+          Item you are offering for sale.
+        </ResponseField>
+        <ResponseField name="sold" type="string">
+          Item you have just sold.
+        </ResponseField>
+        <ResponseField name="to restore" type="string">
+          Incomplete item requiring restoration.
+          <Tip>As long as items are in the `to restore` state they are not taken into account in the dashboard.</Tip>
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+    </Accordion>
+    <Accordion icon="input-numeric" title="Price">
+    Depending on the type of `transaction`, you will also need to fill in the price fields.
+    <Tip>Don't remember a price? Enter `0.00`, you can change it later.</Tip>
+    <ResponseField name="purchase price" type="decimal" required>
+      Item purchase price. Mandatory for `owned`, `for sale`, `sold`, `to restore` transactions.
+    </ResponseField>
+    <ResponseField name="for sale price" type="decimal" required>
+      Item sale price. Mandatory for `for sale`, `sold` transactions.
+    </ResponseField>
+    <ResponseField name="sold price" type="decimal" required>
+      Item sale price. Mandatory for `sold` transactions.
+    </ResponseField>
+    For `sold` items, you can optionally indicate on which store the item was sold.
+    <ResponseField name="sold on" type="list">
+      Store where the item was sold.
+    </ResponseField>
+    </Accordion>  
+  </AccordionGroup>
