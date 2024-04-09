@@ -1,0 +1,24 @@
+---
+title: 'Widget'
+description: 'Sales of the year'
+icon: 'gauge'
+---
+    <Frame>
+        <img className="block dark:hidden" src="/images/widget-sales-of-the-year-light.png"/>
+        <img className="hidden dark:block" src="/images/widget-sales-of-the-year-dark.png"/>
+    </Frame>
+
+The `amount of sales` is equal to :
+
+**\+** Sales price of items sold
+**\+** Bulk sales price
+
+`Profit` is equal to :
+
+**\+** Sales price of items sold **\-** Purchase price of items sold
+**\+** Bulk sales price **\-** Bulk purchase price
+**\-** Fees
+
+The profit progress bar shows the year's profit progress **in relation to the previous year**.
+
+The `profit rate` is equal to : `profit` / (Purchase price of items sold + Purchase price of bulk)
