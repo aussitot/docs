@@ -4,38 +4,31 @@ description: 'Average estimated profit'
 icon: 'gauge'
 ---
     <Frame>
-        <img className="block h-32 dark:hidden" src="/images/widget-average-profit-light.png"/>
-        <img className="hidden h-32 dark:block" src="/images/widget-average-profit-dark.png"/>
+        <img className="block dark:hidden" src="/images/widget-average-profit-light.png"/>
+        <img className="hidden dark:block" src="/images/widget-average-profit-dark.png"/>
     </Frame>
 
-The `average estimated profit` is equal to the average between the `maximum estimated profit` and the `minimum estimated profit`.
+The `average estimated profit` is equal to the average between the `maximum estimated profit` and the `minimum estimated profit` with :
 
-With :
+<AccordionGroup>
 
-`maximum estimated profit` =
-----
+  <Accordion title="maximum estimated profit" icon="gauge-max">
+`Price offered for sale` of items currently for sale - Purchase price of items for sale
+`Advised selling price` of items currently in stock - Purchase price of items currently in stock
+Selling price of items sold - Purchase price of items sold
+Bulk selling price - Bulk purchase price
+Fees
+  </Accordion>
 
+  <Accordion title="minimum estimated profit" icon="gauge-min">
+`Advised selling price` of items currently for sale - Purchase price of items for sale
+`Advised second-hand selling price` of items currently in stock - Purchase price of items currently in stock
+Selling price of items sold - Purchase price of items sold
+Bulk selling price - Bulk purchase price
+Fees
+  </Accordion>
+</AccordionGroup>
 
-- + `Price offered for sale` of items currently for sale - Purchase price of items for sale
-- + `Advised selling price` of items currently in stock - Purchase price of items currently in stock
-- + Selling price of items sold - Purchase price of items sold
-- + Bulk selling price - Bulk purchase price
-- - Fees
-
-
-----
-
-and `minimum estimated profit` =
-----
-
-
-- + `Advised selling price` of items currently for sale - Purchase price of items for sale
-- + `Advised second-hand selling price` of items currently in stock - Purchase price of items currently in stock
-- + Selling price of items sold - Purchase price of items sold
-- + Bulk selling price - Bulk purchase price
-- - Fees
-
-
-----
+---
 
 The section on the right shows the evolution of profit **since the previous day**.
