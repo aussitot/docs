@@ -7,3 +7,32 @@ icon: 'gauge'
         <img className="block dark:hidden" src="/images/widget-yield-rate-light.png"/>
         <img className="hidden dark:block" src="/images/widget-yield-rate-dark.png"/>
     </Frame>
+
+The `yield rate` is equal to the average between the `maximum margin` and the `minimum margin` with :
+
+<AccordionGroup>
+  <Accordion title="maximum margin" icon="gauge-max">
+**\+** `Price offered for sale` of items currently for sale **\-** `Purchase price` of items for sale<br />
+**\+** `Advised selling price` of items currently in stock **\-** `Purchase price` of items currently in stock<br />
+**\+** `Selling price` of items sold **\-** `Purchase price` of items sold<br />
+**\+** Bulk `selling price` **\-** Bulk `purchase price`<br />
+**\-** `Fees`<br />
+Divided by<br />
+**\+** `Purchase price` of items for sale<br />
+**\+** `Purchase price` of items currently in stock<br />
+**\+** `Purchase price` of items sold<br />
+**\+** Bulk `purchase price`<br />
+  </Accordion>
+
+  <Accordion title="minimum margin" icon="gauge-min">
+**\+** `Advised selling price` of items currently for sale **\-** `Purchase price` of items for sale<br />
+**\+** `Advised second-hand selling price` of items currently in stock **\-** `Purchase price` of items currently in stock<br />
+**\+** `Selling price` of items sold **\-** `Purchase price` of items sold<br />
+**\+** Bulk `selling price` **\-** Bulk `purchase price`<br />
+**\-** `Fees`
+  </Accordion>
+</AccordionGroup>
+
+---
+
+The section on the right shows the evolution of profit **since the previous day**.
