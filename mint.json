@@ -57,7 +57,12 @@
       "pages": [
         "lg-english/quickstart",
         "lg-english/dashboard",
-        "lg-english/bulk"
+        "lg-english/set",
+        "lg-english/collections",
+        "lg-english/transactions",
+        "lg-english/bulk",
+        "lg-english/fees",
+        "lg-english/faq"
       ]
     },
     {
