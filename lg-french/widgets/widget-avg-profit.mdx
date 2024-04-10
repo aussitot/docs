@@ -1,0 +1,31 @@
+---
+title: 'Widget'
+description: 'Estimation du profit moyen'
+icon: 'gauge'
+---
+    <Frame>
+        <img className="block dark:hidden" src="/images/widget-average-profit-light.png"/>
+        <img className="hidden dark:block" src="/images/widget-average-profit-dark.png"/>
+    </Frame>
+
+Le `bénéfice moyen estimé` est égal à la moyenne entre le `bénéfice maximum estimé` et le `bénéfice minimum estimé` avec :
+
+<AccordionGroup>
+  <Accordion title="profit estimé maximum" icon="gauge-max">
+**\+** `Prix mis en vente` des articles actuellement en vente **\-** `Prix d'achat` des articles en vente<br />.
+**\+** `Prix de vente conseillé` des articles actuellement en stock **\-** `Prix d'achat` des articles actuellement en stock<br /> **\+** `Prix de vente conseillé` des articles actuellement en stock **\-** `Prix d'achat` des articles actuellement en stock
+**\+** `Prix de vente` des articles vendus **\-** `Prix d'achat` des articles vendus<br />
+**\+** `Prix de vente` du vrac **\-** `Prix d'achat` du vrac<br />
+**\-** `Frais`
+  </Accordion>
+
+  <Accordion title="profit minimum estimé" icon="gauge-min">
+**\+** `Prix de vente conseillé` des articles actuellement en vente **\-** `Prix d'achat` des articles en vente<br />
+**\+** `Prix de vente d'occasion conseillé` des articles actuellement en stock **\-** `Prix d'achat` des articles actuellement en stock<br />
+**\+** `Prix de vente` des articles vendus **\-** `Prix d'achat` des articles vendus<br />
+**\+** `Prix de vente` du vrac **\-** `Prix d'achat` du vrac<br />
+**\-** `Frais`
+  </Accordion>
+</AccordionGroup>
+---
+La section de droite montre l'évolution du bénéfice **depuis le jour précédent**.

@@ -76,6 +76,7 @@
       "group": "Pour Commencer",
       "pages": [
         "lg-french/quickstart",
+        "lg-french/dashboard",
         "lg-french/set",
         "lg-french/collections",
         "lg-french/transactions",
@@ -87,7 +88,7 @@
     {
       "group": "Data References",
       "pages": [
-        "lg-french/dashboard",
+        "lg-french/widgets",
         "lg-french/forms"
       ]
     }
