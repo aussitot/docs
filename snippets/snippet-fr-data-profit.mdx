@@ -1,6 +1,8 @@
   <Accordion icon="input-numeric" title="Profit">
     <ResponseField name="profit" type="decimal">
-      Le profit correspond au bénéfice que vous ferez en achetant l'article au `purchase price` et en le vendant au `selling price`.
-      $`profit` = `selling price` - `purchase price`$
+      Le `profit` correspond au bénéfice que vous ferez en achetant l'article au `purchase price` et en le vendant au `selling price`.<br/>
+      $profit = selling_price - purchase_price$<br/>
+      Le `taux de marge` est alors égal à celui défini dans les [paramètres](/lg-french/settings).<br/>
+      $margin = \frac{profit}{purchase_price}*100$
     </ResponseField>
   </Accordion>
