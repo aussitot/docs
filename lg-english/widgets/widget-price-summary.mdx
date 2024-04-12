@@ -3,8 +3,23 @@ title: 'Widget'
 description: 'Price summary'
 icon: 'money-bill'
 ---
+import MarketPrice from '/snippets/snippet-en-data-market-price.mdx';
+import PurchasePrice from '/snippets/snippet-en-data-purchase-price.mdx';
+import SellingPrice from '/snippets/snippet-en-data-selling-price.mdx';
+import Profit from '/snippets/snippet-en-data-profit.mdx';
+
     <Frame>
         <img className="block dark:hidden" src="/images/widget-price-summary-light.png"/>
         <img className="hidden dark:block" src="/images/widget-price-summary-dark.png"/>
     </Frame>
 
+The `price summary` widget shows the most important prices for the set or minifig according to its `new` or `used` status. 
+
+## Datas
+
+<AccordionGroup>
+<MarketPrice />
+<PurchasePrice />
+<SellingPrice />
+<Profit />
+</AccordionGroup>
