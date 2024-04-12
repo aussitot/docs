@@ -3,10 +3,17 @@ title: 'Widget'
 description: 'Résumé des prix'
 icon: 'money-bill'
 ---
+import MarketPrice from '/snippets/snippet-fr-data-market-price.mdx';
+
     <Frame>
         <img className="block dark:hidden" src="/images/widget-price-summary-light.png"/>
         <img className="hidden dark:block" src="/images/widget-price-summary-dark.png"/>
     </Frame>
 
-Le widget `résumé des prix` présente les prix importants concernant le set ou la minifig en fonction de son état `neuf` ou `occasion`. 
+Le widget `price summary` présente les prix importants concernant le set ou la minifig en fonction de son état `neuf` ou `occasion`. 
 
+## Datas
+
+<AccordionGroup>
+<MarketPrice />
+</AccordionGroup>
