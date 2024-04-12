@@ -53,7 +53,7 @@
       ]
     },
     {
-      "group": "Getting Started",
+      "group": "Guides",
       "pages": [
         "lg-english/quickstart",
         "lg-english/dashboard",
@@ -62,6 +62,7 @@
         "lg-english/transactions",
         "lg-english/bulk",
         "lg-english/fees",
+        "lg-english/settings",
         "lg-english/faq"
       ]
     },
@@ -74,7 +75,7 @@
       ]
     },
     {
-      "group": "Pour Commencer",
+      "group": "Guides",
       "pages": [
         "lg-french/quickstart",
         "lg-french/dashboard",
@@ -83,6 +84,7 @@
         "lg-french/transactions",
         "lg-french/bulk",
         "lg-french/fees",
+        "lg-french/settings",
         "lg-french/faq"
       ]
     },
