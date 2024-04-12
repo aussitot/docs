@@ -66,8 +66,9 @@
       ]
     },
     {
-      "group": "Data References",
+      "group": "References",
       "pages": [
+        "lg-english/data",
         "lg-english/widgets",
         "lg-english/forms"
       ]
@@ -86,8 +87,9 @@
       ]
     },
     {
-      "group": "Data References",
+      "group": "References",
       "pages": [
+        "lg-french/data",
         "lg-french/widgets",
         "lg-french/forms"
       ]
