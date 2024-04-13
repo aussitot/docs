@@ -1,6 +1,8 @@
-  <Accordion icon="input-numeric" title="Selling price">
+  <Accordion icon="input-numeric" title="Selling price (SLP)">
     <ResponseField name="selling price" type="decimal">
       Prix auquel vous devrez vendre l'article (en fonction du taux de `discount` défini dans les [paramètres](/lg-french/settings)). 
       <p>$selling\,price = market\,price * discount$</p>
+      Si avez activé le paramètre `shops fees` :
+      <p>$selling\,price = market\,price * discount - fees$</p>
     </ResponseField>
   </Accordion>

@@ -3,10 +3,11 @@ title: 'Widget'
 description: 'Résumé des prix'
 icon: 'money-bill'
 ---
-import MarketPrice from '/snippets/snippet-fr-data-market-price.mdx';
-import PurchasePrice from '/snippets/snippet-fr-data-purchase-price.mdx';
-import SellingPrice from '/snippets/snippet-fr-data-selling-price.mdx';
-import Profit from '/snippets/snippet-fr-data-profit.mdx';
+import MarketPrice from '/snippets/data/snippet-fr-data-market-price.mdx';
+import ListedPrice from '/snippets/data/snippet-fr-data-listed-price.mdx';
+import PurchasePrice from '/snippets/data/snippet-fr-data-purchase-price.mdx';
+import SellingPrice from '/snippets/data/snippet-fr-data-selling-price.mdx';
+import Profit from '/snippets/data/snippet-fr-data-profit.mdx';
 
     <Frame>
         <img className="block dark:hidden" src="/images/widget-price-summary-light.png"/>
@@ -15,11 +16,40 @@ import Profit from '/snippets/snippet-fr-data-profit.mdx';
 
 Le widget `price summary` présente les prix importants concernant le set ou la minifig en fonction de son état `neuf` ou `occasion`. 
 
+Si vous activez le paramètre `shops fees` dans les [paramètres](/lg-french/settings) les prix indiquées prennent en compte **une estimation** des `fees` (frais) que doivent payer les acheteurs de vos produit sur les plateformes de vente facturant des frais aux acheteurs telles que Vinted ou Leboncoin.
+
+    <Frame>
+        <img className="block dark:hidden" src="/images/widget-price-summary-extend-light.png"/>
+        <img className="hidden dark:block" src="/images/widget-price-summary-extend-dark.png"/>
+    </Frame>
+
+
 ## Data
 
 <AccordionGroup>
 <MarketPrice />
+<ListedPrice />
 <PurchasePrice />
 <SellingPrice />
 <Profit />
 </AccordionGroup>
+
+## Exemples
+
+Avec le paramètre `shops fees` désactivé, le paramètre `discount` = 0.9 et le paramètre `marge neuf` = 0.3:
+
+Prenons un article `neuf` dont le `market price` = 100.00<br />
+- Pour être compétitif vous pouvez donc le vendre à `market price` * `discount`. Donc `selling price` = 100.00 * 0.90 = **90.00**
+- Pour obtenir une `marge neuf` de 30% vous devez donc l'acheter à `selling price` / (1+`marge neuf`). Donc `purchase price` = 90.00 / (1+0.3) = **69.23**
+- Vous ferez un `profit` de `selling price` - `purchase price`. Donc `profit` = 90.00 - 69.23 = **20.77**
+- Soit une marge de `profit` / `purchase price`. Donc `marge neuf` = 20.77 / 69.23 = **0.3**
+
+***
+Avec le paramètre `shops fees` activé, le paramètre `discount` = 0.9 et le paramètre `marge neuf` = 0.3:
+
+Prenons un article `neuf` dont le `market price` = 100.00<br />
+- Pour être compétitif vous pouvez donc le vendre à `market price` * `discount` - `fees`. Donc `selling price` = 100 * 0.9 - 8.58 = **81.42**
+- Pour obtenir une `marge neuf` de 30% vous devez donc l'acheter à `selling price` / (1+`marge neuf`). Donc `purchase price` = 81.42 / (1+0.3) = **62.63**
+- Il doit donc être affiché dans la boutique sur laquelle vous allez l'acheter au prix de `purchase price` - `fees`. Donc `listed price` = 62.63 - 6.71 = **55.92**
+- Vous ferez un `profit` de `selling price` - `purchase price`. Donc `profit` = 81.42 - 55.92 = **18.79**
+- Soit une marge de `profit` / `purchase price`. Donc `marge neuf` = 18.79 / 62.63 = **0.3**
