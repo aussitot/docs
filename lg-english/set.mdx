@@ -4,10 +4,68 @@ description: 'Find out more about the Set & Minifigs page'
 icon: 'address-card'
 ---
 import SetWidgets from '/snippets/widget/snippet-en-widget-set.mdx';
+import AddTransaction from '/snippets/form/snippet-en-form-add-transaction.mdx';
+import AddParts from '/snippets/form/snippet-en-form-add-parts.mdx';
 
 ## Presentation
 
 The **Sets & Minifigs** page presents all useful information concerning a set or minifig. It can be accessed by entering a set or minifig reference (according to the Bricklink&reg; nomenclature) in the `search zone`. Depending on your [settings](/lg-english/settings), the information and widgets displayed may vary.
+
+## Actions
+### Add a transaction
+
+**Transactions represent all modifications to your item**. If you buy this item you must create a `owned` transaction, if you put it up for sale a `For sale` transaction. Once sold, you must create an `sold` transaction. Etc...
+
+To do this, click on the `+Add` button in the top right-hand corner of the set file, then select `Transaction`.<br/>.
+Then fill in the various fields and save.
+
+<AddTransaction />
+
+**A few examples:**
+- You have a "new" item and decide it's time to build it.
+<Steps>
+  <Step title="Add a transaction">
+    Click on the `+Add` button in the top right-hand corner, then choose `Transaction`.
+  </Step>
+  <Step title="Enter information">
+    Normally, a **owned** `transaction` already exists for this item (because you own it). Just change the `status` from **new** to **used** and save.
+  </Step>
+</Steps>
+
+- You've bought (or been given) an item which, alas, is incomplete. You'll have to restore it.
+<Steps>
+  <Step title='Add an owned transaction'>
+    Click on the `+Add` button at the top right, then choose `Transaction`.
+  </Step>
+  <Step title="Enter information">
+    Choose **owned** as the `transaction` for this item. Choose **used** as the `status` and finally enter the `purchase price` (which may be 0.00 in the case of a gift) and save.
+  </Step>
+     <Step title='Add a "to restore" transaction'>
+    click on the top-right `+Add` button, then choose `Transaction`.
+  </Step>
+  <Step title="Enter information">
+    Choose **To restore** as the `transaction` for this item and save.
+    <Tip>The **To restore** choice only appears if you have previously entered a **owned** `transaction`</Tip>.
+  </Step>
+</Steps>
+
+- That's it, I've restored my item!
+
+You can now either : 
+- delete the `transaction` **To restore** by clicking on the red garbage can in the `Transactions history` widget at the very bottom of the page.
+- add a new `transaction` **owned**.
+
+### Add a parts purchase
+
+When an item is incomplete, you may need to purchase the missing parts on sites such as [Bricklink&reg;](https://www.bricklink.com).
+You therefore need to update the `purchase price` of this item to take into account the purchase of these additional parts.
+
+To do this, click on the `+Add` button in the top right-hand corner of the set file, then select `Parts purchased`.
+Then fill in the various fields and save.
+
+<AddParts />
+
+Once saved, the `parts price` will be added to the `purchase price`.
 
 ## Widgets
 
