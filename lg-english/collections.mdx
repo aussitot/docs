@@ -3,3 +3,23 @@ title: 'Collections'
 description: 'How to manage collections pages'
 icon: 'layer-group'
 ---
+import PurchasePrice from '/snippets/data/snippet-en-data-purchase-price.mdx';
+import MarketPrice from '/snippets/data/snippet-en-data-market-price.mdx';
+import SellingPrice from '/snippets/data/snippet-en-data-selling-price.mdx';
+import MarginPrice from '/snippets/data/snippet-en-data-margin-price.mdx';
+import ForSalePrice from '/snippets/data/snippet-en-data-forsale-price.mdx';
+import Profit from '/snippets/data/snippet-en-data-profit.mdx';
+
+## For Sale
+This collection displays all products currently on sale.
+<Info>Products that appear on a yellow background are **those offered for sale at an insufficient price** (compared to the market price)</Info>
+
+### Données
+<AccordionGroup>
+<PurchasePrice />
+<MarketPrice />
+<SellingPrice />
+<MarginPrice />
+<ForSalePrice />
+<Profit />
+</AccordionGroup>
