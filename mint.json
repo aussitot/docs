@@ -63,6 +63,7 @@
         "lg-english/bulk",
         "lg-english/fees",
         "lg-english/settings",
+        "lg-english/integrations",
         "lg-english/faq"
       ]
     },
@@ -85,6 +86,7 @@
         "lg-french/bulk",
         "lg-french/fees",
         "lg-french/settings",
+        "lg-french/integrations",
         "lg-french/faq"
       ]
     },

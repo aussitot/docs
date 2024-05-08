@@ -1,0 +1,118 @@
+---
+title: 'Integrations'
+description: "Connection with other tools"
+icon: 'flask-gear'
+---
+You can access the `Integrations` page by clicking on your nickname in the top right-hand corner, then `settings`. Then, in the left-hand menu, choose `Integrations`.
+## CSV
+    <Frame caption="Import with CSV">
+        <img className="block h-48 dark:hidden" src="/images/import-csv-light.png"/>
+        <img className="hidden h-48 dark:block" src="/images/import-csv-dark.png"/>
+    </Frame>
+
+You can import your collection by submitting a `.csv` file
+<Note>Importing by csv file **only allows you to import sets or figs you own**. If you wish to import sets for sale or sold, you must first import them into the `owned` collection and then add the for sale or sold transactions from the Legaussitot interface.</Note>
+### File format
+The `.csv` file is a text file with the various fields separated by `;`.
+It may or may not include a header line which, if present, must comply exactly with the following syntax:
+```Rust
+setid;itemid;date;purchase_price;status
+```
+For each set or fig you wish to import, you must add a line with the following information:
+
+<AccordionGroup>
+  <Accordion icon="input-text" title="setid (or figid)">
+    <ResponseField name="setid" type="text" required>
+      Setid or Figid of the set or fig you want to add.
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="input-numeric" title="itemid">
+    <ResponseField name="itemid" type="integer" default="1">
+      Item number (if you have several copies). If the field is empty, we take the value 1.
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="calendar-days" title="date">
+    <ResponseField name="date" type="date" default="now()">
+      Purchase date in YYYY-MM-DD format. If the field is empty, the current date is used.
+    </ResponseField>
+  </Accordion>
+   <Accordion icon="input-numeric" title="purchase_price">
+    <ResponseField name="purchase_price" type="decimal" default="0.00">
+      Purchase price of the item. If the field is empty, 0.00 is used.
+    </ResponseField>
+  </Accordion>
+    <Accordion icon="list-dropdown" title="status">
+      <ResponseField name="status" type="list" required>
+        New or used?
+        <Expandable title="properties">
+          <ResponseField name="new" type="string">
+            New item
+          </ResponseField>
+          <ResponseField name="used" type="string">
+            Used item
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Accordion>
+  </AccordionGroup>
+
+  Here is an example of a correct `.csv` file:
+  ```Rust
+setid;itemid;date;purchase_price;status
+10220;2;2024-05-06;;used
+910033;1;2024-05-06;210.25;new
+40684;1;;;new
+77050;;;;new
+```
+Then click on the `Import` button. The system will check the `.csv` file for any anomalies. 
+
+If it contains errors, it will tell you where the errors are.
+If this is correct it will import the file and create the records in the database.
+<Note> No records will be created until the system detects errors. You can therefore submit your file several times without the risk of duplicates.</Note>
+
+### Codes erreur
+<AccordionGroup>
+  <Accordion icon="circle-exclamation" title="ERROR 11">
+    Unable to upload file.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 12">
+    No file.
+    Choose a file to import.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 13">
+    The file must be a `.csv` or `.txt`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 14">
+    Unable to upload file.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 21">
+    The header line is incorrect.
+    You can either delete this line or write exactly the following line:
+    ```Rust
+    setid;itemid;date;purchase_price;status
+    ```
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 31">
+    Incorrect number of fields or incorrect separator.
+    Check that fields are separated by `;` and that you haven't forgotten any.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 32">
+    The `status` field is incorrect. It should be `new` or `used`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 33">
+    The `purchase_price` field is incorrect. It should be a numeric value with a `.` as decimal separator.
+  </Accordion>
+  <Accordion icon="circle-exclamation" title="ERROR 34">
+    The `date` field is incorrect. It must be in the form `YYYY-MM-DD`. For example, for April 1, 2024: `2024-04-01`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 35">
+    The `itemid` field is incorrect. It must be an integer value.
+  </Accordion>
+  <Accordion icon="circle-exclamation" title="ERROR 51">
+    The set or fig reference does not exist.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 71">
+    There are already transactions for this setid,itemid in the database (you already own it or have sold it). Change the value of `itemid` if you want to add a new set.
+  </Accordion>
+
+</AccordionGroup>

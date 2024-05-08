@@ -1,0 +1,118 @@
+---
+title: 'Intégrations'
+description: "Connection avec d'autres outils"
+icon: 'flask-gear'
+---
+Vous pouvez accéder à la page `Integrations` en cliquant sur votre pseudo en haut à droite puis `settings`. Ensuite, dans le menu à gauche, choisissez `Integrations`.
+## CSV
+    <Frame caption="Import with CSV">
+        <img className="block h-48 dark:hidden" src="/images/import-csv-light.png"/>
+        <img className="hidden h-48 dark:block" src="/images/import-csv-dark.png"/>
+    </Frame>
+
+Vous pouvez importer votre collection en soumettant un fichier `.csv`
+<Note>L'import par fichier csv **permet uniquement d'importer les sets ou figs que vous possédez**. Si vous souhaitez importer des sets à vendre ou vendu il faut d'abord les importer dans la collection `owned` et ensuite ajoutez les transactions de mise en vente ou de vente depuis l'interface de Legaussitot.</Note>
+### Format du fichier
+Le fichier `.csv` est un fichier texte avec les différents champs séparés par des `;`.
+Il peut comporter, ou pas, une ligne d'entête qui, si elle est présente, doit respecter exactement la syntaxe suivante :
+```Rust
+setid;itemid;date;purchase_price;status
+```
+Pour chaque set ou fig que vous souhaitez importer vous devez ajouter une ligne avec les informations suivantes :
+
+<AccordionGroup>
+  <Accordion icon="input-text" title="setid (or figid)">
+    <ResponseField name="setid" type="text" required>
+      Setid ou Figid du set ou de la fig que vous voulez ajouter.
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="input-numeric" title="itemid">
+    <ResponseField name="itemid" type="integer" default="1">
+      Numéro de l’item (dans le cas ou vous avez plusieurs exemplaires). Si le champ est vide alors on prends la valeur 1.
+    </ResponseField>
+  </Accordion>
+  <Accordion icon="calendar-days" title="date">
+    <ResponseField name="date" type="date" default="now()">
+      Date de l'achat au format YYYY-MM-DD. Si le champ est vide on prends la date du jour.
+    </ResponseField>
+  </Accordion>
+   <Accordion icon="input-numeric" title="purchase_price">
+    <ResponseField name="purchase_price" type="decimal" default="0.00">
+      Prix d'achat de l'article. Si le champ est vide on prends 0.00.
+    </ResponseField>
+  </Accordion>
+    <Accordion icon="list-dropdown" title="status">
+      <ResponseField name="status" type="list" required>
+        Neuf ou d’occasion ?
+        <Expandable title="properties">
+          <ResponseField name="new" type="string">
+            Article Neuf
+          </ResponseField>
+          <ResponseField name="used" type="string">
+            Article d'occasion
+          </ResponseField>
+        </Expandable>
+      </ResponseField>
+    </Accordion>
+  </AccordionGroup>
+
+  Voici un exemple de fichier `.csv` correct :
+  ```Rust
+setid;itemid;date;purchase_price;status
+10220;2;2024-05-06;;used
+910033;1;2024-05-06;210.25;new
+40684;1;;;new
+77050;;;;new
+```
+Cliquez ensuite sur le bouton `Import`. Le système va vérifier le fichier `.csv` pour détecter les éventuelles anomalies. 
+
+Si celui-ci comporte des erreurs il vous indiquera ou sont les erreurs.
+Si celui-ci est correct il importera le fichier et créera les enregistrement dans la base.
+<Note>Aucun enregistrement ne sera effectué tant que le système détecte des erreurs. Vous pouvez donc soumettre votre fichier plusieurs fois sans risque de doublons.</Note>
+
+### Codes erreur
+<AccordionGroup>
+  <Accordion icon="circle-exclamation" title="ERROR 11">
+    Impossible d'uploader le fichier.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 12">
+    Pas de fichier.
+    Choisissez un fichier à importer.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 13">
+    Le fichier doit être un `.csv` ou `.txt`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 14">
+    Impossible d'uploader le fichier.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 21">
+    La ligne d'entête est incorrecte.
+    Vous pouvez soit supprimer cette ligne, soit écrire exactement la ligne suivante :
+    ```Rust
+    setid;itemid;date;purchase_price;status
+    ```
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 31">
+    Nombre incorrect de champs ou séparateur incorrect.
+    Vérifiez que les champs sont séparés par des `;` et que vous n'en avez pas oublié.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 32">
+    Le champs `status` est incorrect. Cela doit être `new` ou `used`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 33">
+    Le champs `purchase_price` est incorrect. Cela doit être une valeur numérique avec un `.` comme séparateur décimal.
+  </Accordion>
+  <Accordion icon="circle-exclamation" title="ERROR 34">
+    Le champs `date` est incorrect. Il doit être de la forme `YYYY-MM-DD`. Par exemple pour le 1er avril 2024 : `2024-04-01`.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 35">
+    Le champs `itemid` est incorrect. Cela doit être une valeur numérique entière.
+  </Accordion>
+  <Accordion icon="circle-exclamation" title="ERROR 51">
+    La référence du set ou de la fig n'existe pas.
+  </Accordion>
+    <Accordion icon="circle-exclamation" title="ERROR 71">
+    Il existe déjà des transactions pour ce setid,itemid dans la base (vous le possédez déjà ou vous l'avez vendu). Modifiez la valeur de `itemid` si vous voulez ajouter un nouveau set.
+  </Accordion>
+
+</AccordionGroup>
