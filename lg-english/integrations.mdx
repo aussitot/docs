@@ -12,7 +12,7 @@ You can access the `Integrations` page by clicking on your nickname in the top r
 
 You can import your collection by submitting a `.csv` file
 <Note>Importing by csv file **only allows you to import sets or figs you own**. If you wish to import sets for sale or sold, you must first import them into the `owned` collection and then add the for sale or sold transactions from the Legaussitot interface.</Note>
-<Warning>If you have a large collection to import, it's best to make several CSV files of **no more than 50 lines**</Warning>
+<Warning>The number of lines in the CSV file must not exceed 100.</Warning>
 ### File format
 The `.csv` file is a text file with the various fields separated by `;`.
 It may or may not include a header line which, if present, must comply exactly with the following syntax:
@@ -86,7 +86,10 @@ If this is correct it will import the file and create the records in the databas
     <Accordion icon="circle-exclamation" title="ERROR 14">
     Unable to upload file.
   </Accordion>
-    <Accordion icon="circle-exclamation" title="ERROR 21">
+    <Accordion icon="circle-exclamation" title="ERROR 15">
+    The number of lines in the CSV file must not exceed 100.
+  </Accordion>
+  <Accordion icon="circle-exclamation" title="ERROR 21">
     The header line is incorrect.
     You can either delete this line or write exactly the following line:
     ```Rust
