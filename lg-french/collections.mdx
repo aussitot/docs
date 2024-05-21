@@ -9,7 +9,9 @@ import SellingPrice from '/snippets/data/snippet-fr-data-selling-price.mdx';
 import MarginPrice from '/snippets/data/snippet-fr-data-margin-price.mdx';
 import ForSalePrice from '/snippets/data/snippet-fr-data-forsale-price.mdx';
 import Profit from '/snippets/data/snippet-fr-data-profit.mdx';
-import YieldRate from '/snippets/data/snippet-fr-yield-rate.mdx';
+import YieldRate from '/snippets/data/snippet-fr-data-yield-rate.mdx';
+import SoldPrice from '/snippets/data/snippet-fr-data-sold-price.mdx';
+import SoldOn from '/snippets/data/snippet-fr-data-sold-on.mdx';
 
 ## <Icon icon="bag-shopping" iconType="regular" color="000000" size={24}/> For Sale
 Cette collection affiche tous les produits actuellement en vente.
@@ -37,4 +39,17 @@ Cette collection affiche tous les produits que vous possédez (et qui ne sont pa
 <MarginPrice />
 <Profit />
 <YieldRate />
+</AccordionGroup>
+
+## <Icon icon="money-bills-simple" iconType="regular" color="000000" size={24}/> Sold
+Cette collection affiche tous les produits que vous avez vendu.
+
+### Données
+<AccordionGroup>
+<PurchasePrice />
+<MarketPrice />
+<SoldPrice />
+<Profit />
+<YieldRate />
+<SoldOn />
 </AccordionGroup>
