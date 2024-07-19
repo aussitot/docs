@@ -12,6 +12,8 @@ import Profit from '/snippets/data/snippet-fr-data-profit.mdx';
 import YieldRate from '/snippets/data/snippet-fr-data-yield-rate.mdx';
 import SoldPrice from '/snippets/data/snippet-fr-data-sold-price.mdx';
 import SoldOn from '/snippets/data/snippet-fr-data-sold-on.mdx';
+import LegoPrice from '/snippets/data/snippet-fr-data-lego-price.mdx';
+import ListedPrice from '/snippets/data/snippet-fr-data-listed-price.mdx';
 
 ## <Icon icon="bag-shopping" iconType="regular" color="000000" size={24}/> For Sale
 Cette collection affiche tous les produits actuellement en vente.
@@ -58,7 +60,6 @@ Cette collection affiche tous les produits que vous avez vendu.
 Cette collection affiche tous les produits que vous avez possédez mais qui nécessitent une restauration car ils sont incomplets..
 <Info>Les produits dans cette collection ne sont pas pris en compte dans les calculs (excepté pour le prix d'achat).</Info>
 
-
 ### Données
 <AccordionGroup>
 <PurchasePrice />
@@ -66,4 +67,15 @@ Cette collection affiche tous les produits que vous avez possédez mais qui néc
 <SellingPrice />
 <Profit />
 <YieldRate />
+</AccordionGroup>
+
+## <Icon icon="thumbs-up" iconType="regular" color="000000" size={24}/> Wishes
+Cette collection affiche tous les produits que vous souhaitez acquérir.
+
+### Données
+<AccordionGroup>
+<LegoPrice />
+<MarketPrice />
+<ListedPrice />
+<PurchasePrice />
 </AccordionGroup>

@@ -12,6 +12,8 @@ import Profit from '/snippets/data/snippet-en-data-profit.mdx';
 import YieldRate from '/snippets/data/snippet-en-data-yield-rate.mdx';
 import SoldPrice from '/snippets/data/snippet-en-data-sold-price.mdx';
 import SoldOn from '/snippets/data/snippet-en-data-sold-on.mdx';
+import LegoPrice from '/snippets/data/snippet-en-data-lego-price.mdx';
+import ListedPrice from '/snippets/data/snippet-en-data-listed-price.mdx';
 
 ## <Icon icon="bag-shopping" iconType="regular" color="000000" size={24}/> For Sale
 This collection displays all products currently on sale.
@@ -44,7 +46,7 @@ This collection displays all the products you own (and which are not to be resto
 ## <Icon icon="money-bills-simple" iconType="regular" color="000000" size={24}/> Sold
 This collection displays all the products you have sold.
 
-### Données
+### Data
 <AccordionGroup>
 <PurchasePrice />
 <MarketPrice />
@@ -58,11 +60,22 @@ This collection displays all the products you have sold.
 This collection displays all the products you own but which require restoration because they are incomplete...
 <Info>Products in this collection are not taken into account in calculations (except for purchase price).</Info>
 
-### Données
+### Data
 <AccordionGroup>
 <PurchasePrice />
 <MarketPrice />
 <SellingPrice />
 <Profit />
 <YieldRate />
+</AccordionGroup>
+
+## <Icon icon="thumbs-up" iconType="regular" color="000000" size={24}/> Wishes
+This collection displays all the products you wish to purchase.
+
+### Data
+<AccordionGroup>
+<LegoPrice />
+<MarketPrice />
+<ListedPrice />
+<PurchasePrice />
 </AccordionGroup>
